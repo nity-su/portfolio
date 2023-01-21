@@ -1,4 +1,5 @@
-import { createGlobalStyle } from "styled-component";
+import { createGlobalStyle } from "styled-components";
+import Home from "./pages/Home/Home";
 
 const GlobalStyle = createGlobalStyle`
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -55,7 +56,7 @@ function App() {
   return (
     <div className="App">
       <GlobalStyle />
-      <header className="App-header"></header>
+      <Home />
     </div>
   );
 }
