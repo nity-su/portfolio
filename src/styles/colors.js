@@ -1,9 +1,9 @@
 //text색상
-export const textPrimary = "#FBEAEB";
+export const textPrimary = "#fff5f5";
 
-export const textSecondary = "rgba(255, 255, 255, 0.64)";
+export const textSecondary = "#FBEAEB";
 
-export const textYellow = "#FFD121";
+export const textFocus = "#FF731D";
 
 export const textGreen = "#22c55e";
 

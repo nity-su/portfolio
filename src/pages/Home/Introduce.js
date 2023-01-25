@@ -1,15 +1,17 @@
 import React from "react";
 import styled from "styled-components";
-import * as color from "../../styles/colors.js";
+import * as colors from "../../styles/colors.js";
 import * as pixel from "../../styles/pixel";
 
 const Container = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  width: 100%;
-  height: 720px;
-  background-color: ${color.bgPrimary};
+  width: 60%;
+  height: 80vh;
+  max-width: 900px;
+  margin-bottom: 20vh;
+  background-color: ${colors.bgPrimary};
 
   @media (max-width: 780px) {
     display: flex;
@@ -35,17 +37,23 @@ const TextWrapper = styled.span`
 `;
 
 const TextTitle = styled.span`
-  color: ${color.textPrimary};
-  font-size: 3rem;
+  color: ${colors.textPrimary};
+  font-family: "Noto Sans KR";
+  font-size: 5rem;
+  font-weight: 700;
 `;
 
 const TextSubTitle = styled.span`
-  color: ${color.textPrimary};
+  margin-top: 20px;
+  color: ${colors.textPrimary};
+  font-family: "Noto Sans KR";
   font-size: 2rem;
+  font-weight: 700;
 `;
 
 const TextDescription = styled.span`
-  color: ${color.textPrimary};
+  margin-top: 16px;
+  color: ${colors.textPrimary};
   font-size: 1rem;
 `;
 
@@ -56,12 +64,11 @@ export default function Introduce() {
     <Container>
       <TextWrapper>
         <TextTitle>Nity</TextTitle>
-        <TextSubTitle>브론트 엔드& 블록체인</TextSubTitle>
+        <TextSubTitle>프론트 엔드 & 블록체인</TextSubTitle>
         <TextDescription>
           프론트 엔드를 공부하면서 블록체인을 탐구하고 있는 개발자입니다.
         </TextDescription>
       </TextWrapper>
-      <img src={path} alt="I dont know" />
     </Container>
   );
 }

@@ -68,3 +68,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### 참고
+
+픽셀과 REM 설명 [https://uxdesign.cc/why-designers-should-move-from-px-to-rem-and-how-to-do-that-in-figma-c0ea23e07a15](https://uxdesign.cc/why-designers-should-move-from-px-to-rem-and-how-to-do-that-in-figma-c0ea23e07a15)
+
+2color [https://2colors.colorion.co/](https://2colors.colorion.co/)
+
+sticky[https://www.designcise.com/web/tutorial/how-to-fix-issues-with-css-position-sticky-not-working](https://www.designcise.com/web/tutorial/how-to-fix-issues-with-css-position-sticky-not-working)
