@@ -103,7 +103,7 @@ export default function AboutMe() {
             React를 배웠습니다. 현재는 배웠던 과정을 토대로, 프로젝트를 하면서
             정리해두었던 기록을 블로그에 올리고 있습니다.
           </TextDescription>
-          <SkillTitle>최근에 읻혔던 스킬.</SkillTitle>
+          <SkillTitle>최근에 학습한 스킬.</SkillTitle>
           <SkillSetGrid>
             {tempJson.map((skill, index) => (
               <li key={index}>{skill}</li>
