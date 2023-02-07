@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useRef, useState } from "react";
+import React, { Suspense, useRef, useState } from "react";
 import * as colors from "../../styles/colors";
 import { Canvas } from "@react-three/fiber";
 import styled from "styled-components";

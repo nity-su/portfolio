@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import * as colors from "../../styles/colors";
-import * as pixel from "../../styles/pixel";
 import profile from "../../asset/images/subin.jpg";
 
 const Container = styled.div`
