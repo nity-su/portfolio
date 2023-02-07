@@ -8,9 +8,11 @@ const Container = styled.div`
   width: 60%;
   max-width: 900px;
   background-color: ${colors.bgPrimary};
+  margin-top: 30vh;
+  margin-bottom: 40vh;
   @media (max-width: 780px) {
     width: 100%;
-    margin-left: 24px;
+    padding-left: 0px;
   }
 `;
 
@@ -19,7 +21,7 @@ const ContentsWrapper = styled.div`
   justify-content: start;
   margin-top: 32px;
   @media (max-width: 780px) {
-    width: 85%;
+    width: 100%;
     flex-direction: column-reverse;
     align-items: center;
   }
@@ -39,12 +41,18 @@ const TextDescription = styled.span`
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.5rem;
+  @media (max-width: 780px) {
+    padding: 0px 8px;
+  }
 `;
 const LeftWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
   margin-right: 24px;
+  @media (max-width: 780px) {
+    margin-right: 0px;
+  }
 `;
 const PhotoID = styled.img`
   max-width: 300px;
@@ -59,6 +67,9 @@ const SkillTitle = styled.div`
   font-weight: 400;
   font-family: "Open Sans", sans-serif;
   margin-top: 24px;
+  @media (max-width: 780px) {
+    padding-left: 8px;
+  }
 `;
 
 const SkillSetGrid = styled.div`
@@ -71,37 +82,38 @@ const SkillSetGrid = styled.div`
     font-size: 1rem;
     font-weight: 400;
     font-family: "Open Sans", sans-serif;
+    @media (max-width: 780px) {
+      padding-left: 8px;
+    }
   }
 `;
 
 export default function AboutMe() {
   return (
-    <>
-      <Container>
-        <TextTitle>
-          <span>01. </span>AboutMe
-        </TextTitle>
-        <ContentsWrapper>
-          <LeftWrapper>
-            <TextDescription>
-              프론트엔드 개발자 안수빈입니다. 블록체인에 호기심이 생겼고 개인
-              금융, NFT 자산화 등 웹 3.0이란 미래에 이끌려 최근에는 LikeLion
-              BlockChain School 등록하여 4개월간 blockChain을 학습했습니다. 해당
-              과정에서 solidity와 웹 3.0 지식을 익혔고 프론트 엔드 프레임워크
-              React를 배웠습니다. 현재는 배웠던 과정을 토대로, 프로젝트를 하면서
-              정리해두었던 기록을 블로그에 올리고 있습니다.
-            </TextDescription>
-            <SkillTitle>최근에 읻혔던 스킬.</SkillTitle>
-            <SkillSetGrid>
-              {tempJson.map((skill, index) => (
-                <li key={index}>{skill}</li>
-              ))}
-            </SkillSetGrid>
-          </LeftWrapper>
-          <PhotoID src={profile} />
-        </ContentsWrapper>
-      </Container>
-    </>
+    <Container>
+      <TextTitle>
+        <span>01. </span>AboutMe
+      </TextTitle>
+      <ContentsWrapper>
+        <LeftWrapper>
+          <TextDescription>
+            프론트엔드 개발자 안수빈입니다. 블록체인에 호기심이 생겼고 개인
+            금융, NFT 자산화 등 웹 3.0이란 미래에 이끌려 최근에는 LikeLion
+            BlockChain School 등록하여 4개월간 blockChain을 학습했습니다. 해당
+            과정에서 solidity와 웹 3.0 지식을 익혔고 프론트 엔드 프레임워크
+            React를 배웠습니다. 현재는 배웠던 과정을 토대로, 프로젝트를 하면서
+            정리해두었던 기록을 블로그에 올리고 있습니다.
+          </TextDescription>
+          <SkillTitle>최근에 읻혔던 스킬.</SkillTitle>
+          <SkillSetGrid>
+            {tempJson.map((skill, index) => (
+              <li key={index}>{skill}</li>
+            ))}
+          </SkillSetGrid>
+        </LeftWrapper>
+        <PhotoID src={profile} />
+      </ContentsWrapper>
+    </Container>
   );
 }
 

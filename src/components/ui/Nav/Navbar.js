@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import * as colors from "../../../styles/colors";
 
@@ -9,11 +9,12 @@ const Container = styled.nav`
   position: sticky;
   top: 0;
   width: 100%;
-
+  visibility: visible;
+  background-color: ${colors.bgPrimary};
+  z-index: 999999;
   //버튼 hidden => 햄버거
-  @media (max-width: 480px) {
-    font-size: 14px;
-    color: blue;
+  @media (max-width: 720px) {
+    visibility: hidden;
   }
 `;
 
@@ -27,6 +28,11 @@ const Button = styled.button`
   span {
     color: ${colors.textFocus};
   }
+  & > a {
+    color: ${colors.textPrimary};
+
+    text-decoration: none;
+  }
 `;
 
 const LastButton = styled(Button)`
@@ -34,19 +40,28 @@ const LastButton = styled(Button)`
 `;
 
 export default function Navbar() {
+  useEffect(() => {}, []);
   return (
     <Container>
       <Button>
-        <span>01</span> Introduce
+        <a href="#introduce">
+          <span>01</span> Introduce
+        </a>
       </Button>
       <Button>
-        <span>02</span> AboutMe
+        <a href="#aboutMe">
+          <span>02</span> AboutMe
+        </a>
       </Button>
       <Button>
-        <span>03</span> DetailInfo
+        <a href="#detail">
+          <span>03</span> Detail
+        </a>
       </Button>
       <LastButton>
-        <span>04</span> Status
+        <a href="#project">
+          <span>04</span> project
+        </a>
       </LastButton>
     </Container>
   );

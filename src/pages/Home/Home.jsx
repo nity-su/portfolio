@@ -5,6 +5,7 @@ import AboutMe from "./AboutMe";
 import InfoDetail from "./InfoDetail";
 import Introduce from "./Introduce";
 import * as colors from "../../styles/colors";
+import Project from "./Project";
 
 const Container = styled.div`
   display: flex;
@@ -17,9 +18,14 @@ export default function Home() {
   return (
     <Container>
       <Navbar />
+      <div id="introduce"></div>
       <Introduce />
+      <div id="aboutMe"></div>
       <AboutMe />
+      <div id="detail"></div>
       <InfoDetail />
+      <div id="project"></div>
+      <Project />
     </Container>
   );
 }

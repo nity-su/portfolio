@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import Home from "./pages/Home/Home";
+import Hambuger from "./components/ui/hambugerMenu/menu";
 
 const GlobalStyle = createGlobalStyle`
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -50,12 +51,15 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+
 `;
 
 function App() {
   return (
     <div className="App">
       <GlobalStyle />
+      <Hambuger />
       <Home />
     </div>
   );

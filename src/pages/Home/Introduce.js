@@ -8,17 +8,12 @@ const Container = styled.div`
   justify-content: start;
   align-items: center;
   width: 60%;
-  height: 80vh;
+  height: 70vh;
+  margin-top: 15vh;
   max-width: 900px;
-  margin-bottom: 20vh;
   background-color: ${colors.bgPrimary};
 
   @media (max-width: 780px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 480px;
   }
 `;
 
@@ -36,14 +31,14 @@ const TextWrapper = styled.span`
   } */
 `;
 
-const TextTitle = styled.span`
+const TextTitle = styled.p`
   color: ${colors.textPrimary};
   font-family: "Noto Sans KR";
   font-size: 5rem;
   font-weight: 700;
 `;
 
-const TextSubTitle = styled.span`
+const TextSubTitle = styled.p`
   margin-top: 20px;
   color: ${colors.textPrimary};
   font-family: "Noto Sans KR";
@@ -51,15 +46,13 @@ const TextSubTitle = styled.span`
   font-weight: 700;
 `;
 
-const TextDescription = styled.span`
+const TextDescription = styled.p`
   margin-top: 16px;
   color: ${colors.textPrimary};
   font-size: 1rem;
 `;
 
 export default function Introduce() {
-  const path = process.env.PUBLIC_URL + "/logo192.png";
-  console.log(path);
   return (
     <Container>
       <TextWrapper>
