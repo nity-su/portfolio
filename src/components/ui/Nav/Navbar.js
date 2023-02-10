@@ -1,20 +1,19 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import * as colors from "../../../styles/colors";
+import { HashLink } from "react-router-hash-link";
 
 const Container = styled.nav`
   display: flex;
   justify-content: end;
-  margin-top: 32px;
   position: sticky;
   top: 0;
   width: 100%;
-  visibility: visible;
   background-color: ${colors.bgPrimary};
   z-index: 999999;
   //버튼 hidden => 햄버거
   @media (max-width: 720px) {
-    visibility: hidden;
+    display: none;
   }
 `;
 
@@ -44,24 +43,24 @@ export default function Navbar() {
   return (
     <Container>
       <Button>
-        <a href="#introduce">
+        <HashLink to="/#introduce">
           <span>01</span> Introduce
-        </a>
+        </HashLink>
       </Button>
       <Button>
-        <a href="#aboutMe">
+        <HashLink to="/#aboutMe">
           <span>02</span> AboutMe
-        </a>
+        </HashLink>
       </Button>
       <Button>
-        <a href="#detail">
+        <HashLink to="/#detail">
           <span>03</span> Detail
-        </a>
+        </HashLink>
       </Button>
       <LastButton>
-        <a href="#project">
+        <HashLink to="/#project">
           <span>04</span> project
-        </a>
+        </HashLink>
       </LastButton>
     </Container>
   );

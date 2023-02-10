@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Navbar from "../../components/ui/Nav/Navbar";
 import AboutMe from "./AboutMe";
 import InfoDetail from "./InfoDetail";
 import Introduce from "./Introduce";
@@ -17,7 +16,6 @@ const Container = styled.div`
 export default function Home() {
   return (
     <Container>
-      <Navbar />
       <div id="introduce"></div>
       <Introduce />
       <div id="aboutMe"></div>

@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import * as colors from "../../styles/colors";
 import konkrit from "../../asset/images/konkrit.png";
 import metaMusic from "../../asset/images/meta-music.png";
@@ -62,11 +63,15 @@ export default function Project() {
       <ContentsGrid>
         <Cell>
           <h1>NFT_MarketPlace 프로젝트</h1>
-          <img src={metaMusic} alt="metaMusic" />
+          <Link to="/project/nft-marketplace">
+            <img src={metaMusic} alt="metaMusic" />
+          </Link>
         </Cell>
         <Cell>
           <h1>clone Project konkirt Page</h1>
-          <img src={konkrit} alt="konkrit" />
+          <Link to="/project/konkrit">
+            <img src={konkrit} alt="konkrit" />
+          </Link>
         </Cell>
       </ContentsGrid>
     </Container>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { slide as Menu } from "react-burger-menu";
 import styled from "styled-components";
+import { HashLink } from "react-router-hash-link";
 
 const Container = styled.div`
   /* Position and sizing of burger button */
@@ -8,8 +9,8 @@ const Container = styled.div`
     position: fixed;
     width: 36px;
     height: 30px;
-    left: 36px;
-    top: 36px;
+    left: 8px;
+    top: 8px;
   }
 
   /* Color/shape of burger icon bars */
@@ -99,16 +100,16 @@ export default function Hambuger() {
         onStateChange={(stat) => handleStateChange(stat)}
       >
         {menuData.map((data) => (
-          <a
-            className="menu-item"
-            href={data.href}
-            key={data.name}
+          <HashLink
+            to={"/" + data.href}
+            relative="route"
+            className="bm-item"
             onClick={() => {
               setState(false);
             }}
           >
             {data.name}
-          </a>
+          </HashLink>
         ))}
       </Menu>
     </Container>

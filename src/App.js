@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
-import Home from "./pages/Home/Home";
-import Hambuger from "./components/ui/hambugerMenu/menu";
+
+import Router from "./Router";
 
 const GlobalStyle = createGlobalStyle`
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -59,8 +59,7 @@ function App() {
   return (
     <div className="App">
       <GlobalStyle />
-      <Hambuger />
-      <Home />
+      <Router />
     </div>
   );
 }
