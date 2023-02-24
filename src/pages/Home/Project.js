@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import * as colors from "../../styles/colors";
 import konkrit from "../../asset/images/konkrit.png";
 import metaMusic from "../../asset/images/meta-music.png";
+import loginExProject from "../../asset/images/loginex.jpeg";
 import useVisibleHook from "../../hooks/useVisibleHook";
 
 const Container = styled.div`
@@ -40,15 +41,16 @@ const Cell = styled.div`
     width: 100%;
     color: #ff731d;
     margin-bottom: 8px;
-    font-size: 1.2rem;
+    font-size: 100%;
     font-weight: 700;
     z-index: 999;
     top: 50%;
     text-align: center;
   }
 
-  & > img {
+  img {
     width: 100%;
+    height: 180px;
     box-shadow: 12px 12px 10px 1px #212c5c;
   }
 `;
@@ -71,6 +73,12 @@ export default function Project() {
           <h1>clone Project konkirt Page</h1>
           <Link to="/project/konkrit">
             <img src={konkrit} alt="konkrit" />
+          </Link>
+        </Cell>
+        <Cell>
+          <h1>NextJs & TypeScript 활용한 로그인 </h1>
+          <Link to="/project/login-ex-project">
+            <img src={loginExProject} alt="login-ex" />
           </Link>
         </Cell>
       </ContentsGrid>

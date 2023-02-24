@@ -111,4 +111,10 @@ const projects = [
       "clone 프로젝트이며 Flex와 Grid를 사용하여 반응형에 초점을 두고 개발했습니다.",
     skills: "react",
   },
+  {
+    id: "login-ex-project",
+    title: "NextJs & TypeScript 활용한 로그인",
+    description: "",
+    skills: "NextJs, typescript,",
+  },
 ];
