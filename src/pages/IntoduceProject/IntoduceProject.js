@@ -2,8 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
 import * as colors from "../../styles/colors";
-import nftMarketScreenShots from "../../asset/images/nft-marketplace-screenshot/index";
+import { projects } from "../../data/projects";
 import Carousel from "nuka-carousel";
+import { GithubOriginal } from "devicons-react";
 
 const Container = styled.div`
   background-color: ${colors.bgPrimary};
@@ -20,6 +21,8 @@ const CarouselWrapper = styled.div`
   margin-bottom: 32px;
   img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 `;
 
@@ -64,6 +67,13 @@ const Skill = styled.div`
   }
 `;
 
+const AddrSite = styled.a`
+  display: block;
+  text-align: end;
+  margin-left: 12px;
+  color: whitesmoke;
+`;
+
 export default function IntroduceProject() {
   const { name } = useParams();
   console.log(name);
@@ -90,31 +100,13 @@ export default function IntroduceProject() {
             <span>{nameOfSkill}</span>
           ))}
         </Skill>
+        <a href={result.gitHub} target="_blank" rel="noreferrer">
+          <GithubOriginal size={48} style={{ marginTop: "8px" }} />
+        </a>
+        <AddrSite href={result.link} target={result.link}>
+          {result.link}
+        </AddrSite>
       </Contents>
     </Container>
   );
 }
-
-const projects = [
-  {
-    id: "nft-marketplace",
-    title: "NFT-Marketplace",
-    description: `블록체인 스쿨 최종 프로젝트로 진행한 결과물이며, NFT 마켓에서 요구하는 ERC-721 등록과 거래 기능을 구현했습니다. 
-      또한 특정 프로필 이미지를 선택하여 NFT를 대표하는 로고를 넣도록 cloudinary를 활요한 업로드 기능을 추가했습니다.`,
-    skills: ["mysql", "vercel", "truffle", "react", "cloudinary"],
-    images: nftMarketScreenShots,
-  },
-  {
-    id: "clone-project",
-    title: "Clone Project",
-    description:
-      "clone 프로젝트이며 Flex와 Grid를 사용하여 반응형에 초점을 두고 개발했습니다.",
-    skills: "react",
-  },
-  {
-    id: "login-ex-project",
-    title: "NextJs & TypeScript 활용한 로그인",
-    description: "",
-    skills: "NextJs, typescript,",
-  },
-];
