@@ -87,6 +87,10 @@ const GridCell = styled.div`
   align-items: center;
 `;
 
+const Caution = styled.div`
+  margin-top: 20px;
+`;
+
 export default function InfoDetail() {
   const arrayIcons = [...availablePrograming, ...coolTimeProgramming];
   const ref = useRef(null);
@@ -116,7 +120,7 @@ export default function InfoDetail() {
 
   return (
     <Container ref={ref} isVisible={isVisible}>
-      <Title>Detail</Title>
+      <Title>Detail Skill</Title>
       <ContentsWrapper>
         <LeftContents>
           <Canvas
@@ -133,7 +137,6 @@ export default function InfoDetail() {
             <Suspense fallback={null}>
               <Model position={[0.025, -0.9, 0]} />
             </Suspense>
-            {/* <OrbitControls /> */}
           </Canvas>
         </LeftContents>
         <RightContents>
@@ -164,6 +167,9 @@ export default function InfoDetail() {
               );
             })}
           </WrapperSkill>
+          <Caution>
+            시계 표시는 기억이 흐릿하여 다시 배워야 함을 의미합니다.{" "}
+          </Caution>
         </RightContents>
       </ContentsWrapper>
     </Container>

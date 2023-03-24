@@ -5,6 +5,7 @@ import * as colors from "../../styles/colors";
 import konkrit from "../../asset/images/konkrit.png";
 import metaMusic from "../../asset/images/meta-music.png";
 import loginExProject from "../../asset/images/loginex.jpeg";
+import characterScreenShot from "../../asset/images/3d-project.png";
 import useVisibleHook from "../../hooks/useVisibleHook";
 
 const Container = styled.div`
@@ -63,6 +64,12 @@ export default function Project() {
   return (
     <Container ref={ref} isVisible={isVisible}>
       <ContentsGrid>
+        <Cell>
+          <h1>3d-poject</h1>
+          <Link to="/project/3d-project">
+            <img src={characterScreenShot} alt="metaMusic" />
+          </Link>
+        </Cell>
         <Cell>
           <h1>NFT_MarketPlace 프로젝트</h1>
           <Link to="/project/nft-marketplace">

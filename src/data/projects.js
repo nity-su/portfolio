@@ -1,8 +1,18 @@
 import nftMarketScreenShots from "../asset/images/nft-marketplace-screenshot/index";
 import konkrit from "../asset/images/konkrit-screenshot/index";
 import loginNextJs from "../asset/images/login-ex-project/index";
+import characterScreenShot from "../asset/images/3d-project/index";
 
 export const projects = [
+  {
+    id: "3d-project",
+    title: "ThreeJs 구현 연습",
+    description: `3D 이미지로 내놓는 NFT와 맞물려 웹페이지 내에서도 3D의 필요성이 높아질 것이라 판단하여, ThreeJs 기초와 Cannon을 학습했습니다.`,
+    skills: ["react", "ThreeJs", "react-fiber", "react-cannon"],
+    images: characterScreenShot,
+    gitHub: "https://github.com/nity-su/3d-projectWithCannon",
+    link: "https://moving-character.netlify.app/",
+  },
   {
     id: "nft-marketplace",
     title: "NFT-Marketplace",
