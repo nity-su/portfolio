@@ -12,7 +12,7 @@ import useVisibleHook from "../../hooks/useVisibleHook";
 import lock from "../../asset/images/lock.svg";
 
 const Container = styled.div`
-  width: 70%;
+  width: 60%;
   opacity: ${(props) => (props.isVisible ? 1 : 0)};
   ${(props) =>
     props.isVisible
@@ -65,7 +65,7 @@ const LeftContents = styled.div`
 `;
 
 const RightContents = styled.div`
-  width: 50%;
+  width: 70%;
   @media (max-width: 720px) {
     width: 100%;
   }
