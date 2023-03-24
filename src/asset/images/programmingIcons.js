@@ -1,11 +1,14 @@
 import Html5OriginalWordmark from "devicons-react/lib/icons/Html5OriginalWordmark";
 import Css3OriginalWordmark from "devicons-react/lib/icons/Css3OriginalWordmark";
 import JavascriptOriginal from "devicons-react/lib/icons/JavascriptOriginal";
+import { TypescriptOriginal } from "devicons-react";
 import { GithubOriginalWordmark } from "devicons-react";
 import { ReactOriginalWordmark } from "devicons-react";
 import { JavaOriginalWordmark } from "devicons-react";
 import { AndroidOriginal } from "devicons-react";
 import { SolidityOriginal } from "devicons-react";
+import { NextjsOriginalWordmark } from "devicons-react";
+import { ThreejsOriginalWordmark } from "devicons-react";
 
 // import IconNodejs from "react-devicon/nodejs/original-wordmark";
 // import IconExpress from "react-devicon/express/original-wordmark";
@@ -23,5 +26,8 @@ export const availablePrograming = [
   GithubOriginalWordmark,
   ReactOriginalWordmark,
   SolidityOriginal,
+  TypescriptOriginal,
+  NextjsOriginalWordmark,
+  ThreejsOriginalWordmark,
 ];
 export const coolTimeProgramming = [JavaOriginalWordmark, AndroidOriginal];

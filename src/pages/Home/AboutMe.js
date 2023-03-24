@@ -63,30 +63,30 @@ const PhotoID = styled.img`
   border-radius: 120px;
 `;
 
-const SkillTitle = styled.div`
-  font-weight: 400;
-  font-family: "Open Sans", sans-serif;
-  margin-top: 24px;
-  @media (max-width: 780px) {
-    padding-left: 8px;
-  }
-`;
+// const SkillTitle = styled.div`
+//   font-weight: 400;
+//   font-family: "Open Sans", sans-serif;
+//   margin-top: 24px;
+//   @media (max-width: 780px) {
+//     padding-left: 8px;
+//   }
+// `;
 
-const SkillSetGrid = styled.div`
-  display: grid;
-  width: 100%;
-  margin-top: 24px;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 8px;
-  li {
-    font-size: 1rem;
-    font-weight: 400;
-    font-family: "Open Sans", sans-serif;
-    @media (max-width: 780px) {
-      padding-left: 8px;
-    }
-  }
-`;
+// const SkillSetGrid = styled.div`
+//   display: grid;
+//   width: 100%;
+//   margin-top: 24px;
+//   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+//   gap: 8px;
+//   li {
+//     font-size: 1rem;
+//     font-weight: 400;
+//     font-family: "Open Sans", sans-serif;
+//     @media (max-width: 780px) {
+//       padding-left: 8px;
+//     }
+//   }
+// `;
 
 export default function AboutMe() {
   return (
@@ -98,23 +98,9 @@ export default function AboutMe() {
         <LeftWrapper>
           <TextDescription></TextDescription>
           <ReactNotion />
-          <SkillTitle>최근에 학습한 스킬.</SkillTitle>
-          <SkillSetGrid>
-            {tempJson.map((skill, index) => (
-              <li key={index}>{skill}</li>
-            ))}
-          </SkillSetGrid>
         </LeftWrapper>
         <PhotoID src={profile} />
       </ContentsWrapper>
     </Container>
   );
 }
-
-const tempJson = [
-  "Javascript",
-  "Node.js",
-  "Express.js",
-  "solidity",
-  "Hardhat & truffle",
-];
