@@ -44,11 +44,26 @@ const Header = styled.div`
   }
 `;
 const Body = styled.div`
-  & > span {
-    font-size: 16px;
-    line-height: 1.5;
+  width: 100%;
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    width: 100%;
+  }
+
+  .grid-item1 {
+    color: #f2f2f2;
+    padding: 10px;
+    margin: auto;
+  }
+
+  .grid-item2 {
     color: #ddd;
-    margin-bottom: 20px;
+    padding: 10px;
+    li {
+      line-height: 1.5em;
+    }
   }
 `;
 const Skill = styled.div`
@@ -93,7 +108,12 @@ export default function IntroduceProject() {
           <title>{result.title}</title>
         </Header>
         <Body>
-          <span>{result.description}</span>
+          {result.description.map((v, i) => (
+            <div key={i} className="grid-container">
+              <div className="grid-item1">{index(i)}</div>
+              <div className="grid-item2">{split(v)}</div>
+            </div>
+          ))}
         </Body>
         <Skill>
           {result.skills.map((nameOfSkill) => (
@@ -109,4 +129,23 @@ export default function IntroduceProject() {
       </Contents>
     </Container>
   );
+}
+
+function split(str) {
+  return str.split("|").map((v) => (
+    <ul key={v}>
+      <li>{v}</li>
+    </ul>
+  ));
+}
+
+function index(i) {
+  switch (0) {
+    case 0:
+      return "기능";
+    case 1:
+      return "";
+    default:
+      return;
+  }
 }
